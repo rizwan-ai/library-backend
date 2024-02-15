@@ -1,0 +1,97 @@
+# Python
+python --version    # Python 3.11.8
+
+# Django
+pip install Django
+Django==4.2.10
+Installing collected packages:  sqlparse, asgiref, Django
+
+# Django REST Framework (DRF)
+pip install djangorestframework
+djangorestframework==3.14.0
+Installing collected packages:  pytz, djangorestframework
+
+# Psycopg 3 (PostgreSQL)
+pip install "psycopg[binary]"
+psycopg==3.1.18
+Installing collected packages:  typing-extensions, psycopg-binary, psycopg
+
+# MinIO
+pip install minio
+minio==7.1.0
+Installing collected packages:  urllib3, pycryptodome, pycparser, certifi, 
+cffi, argon2-cffi-bindings, argon2-cffi, minio
+
+# Django Admin Interface
+pip install django-admin-interface
+django-admin-interface==0.28.5
+Installing collected packages: text-unidecode, python-slugify, Pillow, 
+django-colorfield, django-admin-interface
+
+# Environs
+python -m pip install 'environs[django]==10.3.0'
+environs==10.3.0
+Installing collected packages:  django-cache-url, dj-email-url, python-dotenv, 
+packaging, marshmallow, dj-database-url, environs
+
+# OpenAPI 3 schema generation for DRF
+pip install drf-spectacular
+drf-spectacular==0.27.1
+Installing collected packages: uritemplate, rpds-py, PyYAML, inflection, attrs, 
+referencing, jsonschema-specifications, jsonschema, drf-spectacular
+
+
+-------------------------------------------------------------------------------
+# Django Commands
+django-admin startproject library
+cd library
+python manage.py runserver
+python manage.py startapp books
+python manage.py migrate
+python manage.py makemigrations books
+python manage.py createsuperuser
+python manage.py startapp book
+
+python manage.py spectacular --file schema.yml      
+# (OpenAPI 3 schema generation for DRF) or Dynamic schema generation
+
+
+# MinIO Service
+[Unit]
+Description=MinIO Server
+After=network.target
+[Service]
+User=zeeshan
+ExecStart=/usr/local/bin/minio server /home/riz/minio/ --console-address :9090
+[Install]
+WantedBy=multi-user.target
+
+# Git Commands
+git config --global user.email "Your Email"
+git config --global user.name "Your Name"
+git config --global init.defaultBranch main
+git init
+git status
+
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin
+git push -u origin main
+git log
+
+git clone -b dev <repository_url>
+git branch
+git checkout -b dev
+git add .
+git status
+git commit -m ":sparkles: Commit message"
+git push origin dev
+git pull origin dev
+
+
+environs or environs[django]
+python-dotenv 
+django-environ 
+python-decouple 
+direnv 

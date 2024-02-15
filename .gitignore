@@ -1,0 +1,58 @@
+# Sensitive Information
+# Add specific files or directories to .gitignore to avoid committing sensitive 
+# information to the repository.
+
+# Virtual Environment
+venv/
+env/
+venv-library/
+
+# Compiled Python files
+*.pyc
+*/*.pyc
+*/*/*.pyc
+*/*/*/*.pyc
+
+# Database
+db.sqlite3
+# */*/migrations/0001_initial.py
+
+# IDE/Editor Files: Visual Studio Code, PyCharm, Visual Studio, Sublime Text, 
+# Vim, macOS, etc.
+.vscode/                
+.idea/                  
+.vs/    
+*.suo               
+*.sublime-project
+*.sublime-workspace
+*.swp
+.DS_Store
+
+# Dependency Management: Pipenv, Yarn, npm, Poetry, etc.
+pip-lock.txt
+yarn.lock
+package-lock.json
+poetry.lock
+
+# Configuration Files
+.venv
+*.env
+# *.env.*
+*.conf
+
+# Logs
+*.log
+/logs/
+
+# Compiled Assets
+/staticfiles/
+/node_modules/
+
+# Local Settings
+local_settings.py
+
+# Requirements Details File
+# req_details.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
